@@ -4,18 +4,6 @@
   $ ->
 
     #
-    # Switching Menu
-    $(".js-menu-trigger-2").on "click touchstart", (e) ->
-      $("body > nav").toggleClass "is-visible"
-      $(".js-menu-screen-2").toggleClass "is-visible"
-      e.preventDefault()
-
-    $(".js-menu-screen-2").on "click touchstart", (e) ->
-      $("body > nav").toggleClass "is-visible"
-      $(".js-menu-screen-2").toggleClass "is-visible"
-      e.preventDefault()
-
-    #
     # Navigation
     menu = $("header nav")
     menuToggle = $(".centered-navigation-menu-button")
@@ -41,15 +29,5 @@
       else if elementTopToWindowBottom < 0
         $(element).removeClass "js-fade-element-show"
         $(element).addClass "js-fade-element-hide"
-
-    #
-    ## Switch Themes
-    $('#switchtheme-switch-form').prependTo("body").hover (->
-      $(this).addClass "show"
-    ), ->
-      $(this).removeClass "show"
-
-    $('#edit-theme').change ->
-      $('#switchtheme-switch-form').submit()
 
 ) jQuery
